@@ -1,0 +1,152 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Geonotes Administration</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+		<style type="text/css">
+        body {
+        padding-top: 60px;
+        }
+        </style>
+		<link href="css/bootstrap.css" rel="stylesheet">
+		        <style>
+            body {
+                padding-top: 60px; 
+                /* 60px pour mettre un peu d'espace entre la barre de titre et le contenu */
+                padding-bottom: 40px;
+            }
+			img {
+				max-width: none !important;
+			}
+			</style>
+		<link href="css/bootstrap-responsive.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap-responsive.min.css">
+        <script src="vendor/jquery-1.8.3.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.min.js"></script>	
+
+    </head>
+    <!-- Body
+    ================================================== -->	
+    <body data-spy="scroll" data-target=".bs-docs-sidebar">
+    <!-- Navbar
+    ================================================== -->
+	
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="index.html">Geonotes Administration</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+               <li class="">
+                <a href="index.html" >Accueil</a>
+              </li>
+              <li class="">
+                <a href="parcours.html" >Parcours</a>
+              </li>
+              <li class="">
+                <a href="notes.html">Notes</a>
+              </li>
+			  <li class="active">
+                <a href="editparcours.html">Gestion des parcours</a>
+              </li>
+            </ul>
+			
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- container body
+    ================================================== --> 
+
+	 
+	
+	 <div class="container">
+	 <div class="thumbnail text-center" >
+		<div class="row-fluid">
+	<div class="span5">
+	  <fieldset>
+		<legend>La gestion des parcours</legend>
+		<label>Choisissez le parcours que vous voulez modifier:</label>
+		<select class=paths>
+		</select>
+
+		<button class="btn" onclick="activerparcours1()">Modifier ce parcours</button>
+
+		<div class=pathmenu id="pathmenuid">
+			<label>Nom parcours</label>
+			<input id="parcoursnom" type="text" placeholder="Type something" 	name="nom_annotation"disabled="disabled">
+			<label>Commentaire parcours</label>
+			<textarea id="parcoursdescription" rows="1" name="commentaire" disabled="disabled"></textarea>
+		
+			<!--
+                        <button class="btn" onclick="">Enregistrer</button>  
+                        -->
+			<label>Les notes associees a ce parcours:</label>
+			
+			<select id="selectnotes" class=notes disabled="disabled">
+		</select>
+			
+                        
+		    <div class="btn-group btn-group-vertical" >
+			<button class="btn" onclick="deleteNote()">Supprimer</button>
+			
+		
+                
+			<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script> 
+	<script src="http://code.jquery.com/jquery-latest.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/underscore.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/backbone.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/backbone.localStorage.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/backbonedefinitions.js" type="text/javascript" charset="utf-8"></script>
+        <script src="js/pathgooglemaps.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/parcours2.js" type="text/javascript" charset="utf-8"></script>
+
+		</div>
+		</div>
+	
+<!--footer 
+============================================================= -->
+
+	<div class="container">	
+		<div class="text-center">
+			<h6>2013 Telecom Saint-Etienne, Hassou ET Halif &#169;</h6> 
+		</div>
+        <div class="navbar navbar-inverse navbar-fixed-bottom">
+           <div class="navbar-inner">
+                <div class="container"> <!-- délimite la largeur de la page -->
+                    <a class="btn btn-block btn-navbar" href="index.html"> 
+                        <span class="icon-home icon-black" ></span>
+                    </a>  
+                </div>
+            </div>
+        </div>
+    </div>
+	</div>
+
+	<div id = "myModal" class="modal hide fade"  role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+			<h3>GeoNotesGeonotes Administration</h3>
+			<br>
+			<h5>Par Zakariaa Hassou et Othmane Halif</h5>	
+		</div>
+		
+		<div class="modal-footer">
+			<button class="btn btn-large btn-inverse" data-dismiss="modal" aria-hidden="true">Close</button>
+		</div>
+  </div>
+        <!-- fin du corps de la page -->
+    </body>
+
+</html>
