@@ -1,4 +1,9 @@
-ProjetIHM
-=========
+Hassou Zakariaa
+Halif Othmane
 
-ProjetIHM
+
+Ce dossier contient:
+	- Le code de notre application 
+	- Les mockups
+	- Les fiches Personae
+	- Le choix d'egronomie
