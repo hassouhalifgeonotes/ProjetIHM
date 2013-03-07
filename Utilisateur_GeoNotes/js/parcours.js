@@ -14,47 +14,9 @@
         var currentPath;   
 
 
-function activer(){
-	document.getElementById("parcournameinput").disabled=false;
-	document.getElementById("parcourbodyinput").disabled=false;
+function demarrerparcours(){
+	
+	
+	
 };
 
-function newPath(){
-
-	var name = document.getElementById("parcournameinput").value;
-	var body = document.getElementById("parcourbodyinput").value;
-	
-    var p = new Path({ 
-        name : name,
-		body: body,
-        notes : new collecNotes()
-    });
-    
-	
-
-
-	
-    paths.add(p);
-    saveCollectionToLocal("mypaths",paths);
-    pathView.render();
-    var indexOf = paths.indexOf(p);
-    selectOfPath.selectedIndex = indexOf;
-    getPathFromSelect();
-	
-	alert("la note a ete ajoutee avec succes");
-
-}
-function updatePath(){
-    currentPath.set("name", $('#parcournameinput')[0].value);
-    currentPath.set("body", $('#parcourbodyinput')[0].value);
-    saveCollectionToLocal("mypaths",paths);
-    pathView.render();
-}
-
-
-
-$('select.paths').on("change", getPathFromSelect);
-$('#parcournameinput').on("change", updatePath);
-$('#parcourbodyinput').on("change", updatePath);
-$('#parcournameinput').on("keyup", updatePath);
-$('#parcourbodyinput').on("keypress", updatePath);
